@@ -1,0 +1,13 @@
+<p>databinding works!</p>
+One way data binding: interpolation<h2>{{ courseName }}</h2>
+<input type="text" value="{{ courseName }}">
+<input type="{{inputType}}">
+<p>property binding</p>
+<input type="text" [value]="courseName">
+<input [type]="inputType">
+<p>event binding</p>
+<button (click)="showMessage('Hello from button!')">Click Me</button>
+<span (click)="showMessage('Hello from span!')">Click Me</span>
+<button (click)="changeCoursName()">Change Course Name to react</button>
+<p>two way data binding </p>
+<input type="text" [(ngModel)]="courseName">
