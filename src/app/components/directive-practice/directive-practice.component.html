@@ -1,0 +1,48 @@
+<p>directive-practice works!</p>
+
+<div>
+    <p>*ngIf directive</p>
+    <div>
+        <p *ngIf="showParagraph" style="color: blue;">This is a simple directive practice component.</p>
+        <button (click)="hide()">Hide Paragraph</button>
+        <button (click)="show()">Show Paragraph</button>
+    </div>
+    <div>
+        <p *ngIf="showParagraph1" style="color: green;">This is another paragraph in the directive practice component.
+        </p>
+        <button (click)="toggleParagraph()">Toggle Paragraph</button>
+    </div>
+    <div>
+        <p *ngIf="text1 == text2" style="color: red;">This is yet another paragraph in the directive practice component.
+            comes's when both value are same
+        </p>
+        <input type="text" [(ngModel)]="text1">
+        <input type="text" [(ngModel)]="text2">
+    </div>
+</div>
+<div>
+    <p>*ngFor directive</p>
+    <ul>
+        <li *ngFor="let item of fruits"> {{ item }} </li>
+    </ul>
+</div>
+<div>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.department }}</td>
+            <td><span *ngIf="employee.status=='true'">Active</span>
+                <span *ngIf="employee.status=='false'">Inactive</span>
+            </td>
+        </tr>
+    </table>
+</div>

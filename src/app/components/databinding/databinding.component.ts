@@ -20,9 +20,10 @@ export class DatabindingComponent implements OnInit {
   showMessage(message: string) {
     alert(message);
   }
-
+  // firstName: string = Signal("Aniket");
   changeCoursName() {
     this.courseName = "React";
+    // this.firstName.set("Aniket Saini");
   };
   ngOnInit(): void {
   }
