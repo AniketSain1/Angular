@@ -1,0 +1,23 @@
+.active {
+    color: green;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: lightgray;
+    color: black;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid black;
+}

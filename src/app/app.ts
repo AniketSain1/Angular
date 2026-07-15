@@ -1,12 +1,22 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-20-learning');
+
+  constructor(private router: Router) { }
+
+  goToSignal() {
+    this.router.navigate(['/signal']);
+  }
+
+  goToAttribute() {
+    this.router.navigate(['/attribute-directive']);
+  }
 }

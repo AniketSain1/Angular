@@ -1,0 +1,62 @@
+<h2>Attribute Directives Practice</h2>
+
+<hr>
+
+<!-- ngClass -->
+
+<h3>ngClass Example</h3>
+
+<p [ngClass]="{
+    active: isActive,
+    bold: isBold
+  }">
+    Welcome to Angular
+</p>
+
+<button (click)="toggleActive()">
+    Toggle Active Color
+</button>
+
+<button (click)="toggleBold()">
+    Toggle Bold
+</button>
+
+<hr>
+
+<!-- ngStyle -->
+
+<h3>ngStyle Example</h3>
+
+<p [ngStyle]="{
+    'color': marks >= 35 ? 'green' : 'red',
+    'font-size': '22px'
+  }">
+
+    Student Marks : {{ marks }}
+
+</p>
+
+<button (click)="increaseMarks()">
+    Increase Marks
+</button>
+<button (click)="decreaseMarks()">
+    Decrease Marks
+</button>
+<hr>
+
+<!-- ngClass + ngStyle Together -->
+
+<h3>Theme Example</h3>
+
+<div class="box" [ngClass]="{
+    dark: isDarkMode,
+    light: !isDarkMode
+  }">
+
+    Angular Attribute Directive
+
+</div>
+
+<button (click)="toggleTheme()">
+    Change Theme
+</button>
